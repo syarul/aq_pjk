@@ -5,6 +5,10 @@ $(document).ready(function () {
 	var scnt = 0; //declare search query count
 	var quranData = 'aq.simple'; // alquran simple
 	var transData = 'id.indonesia'; // indonesia translation
+
+	var devUri = './json/'
+	var prodUri = 'https://raw.githubusercontent.com/syarul/aq_pjk/master/json/'
+	var uri = prodUri
 	
 	//clear global variables and search entries once user focus on input
 	$("#container").focus(function () {
@@ -66,7 +70,7 @@ $(document).ready(function () {
 	var sgr = [];
 	//advance search function
 	function searchData() {
-		$.getJSON("./json/" + transData + ".json", {
+		$.getJSON(uri + transData + ".json", {
 			format : "jsonp",
 		}, function (data) {
 			$.each(data.quran.sura, function (i, v) {
@@ -235,7 +239,7 @@ $(document).ready(function () {
 	function get_aqData(){
 		x = gsur;
 		y = gnum;
-		$.getJSON("./json/" + quranData + ".json", {
+		$.getJSON(uri + quranData + ".json", {
 			format : "jsonp",
 		}, function (data) {
 			eventAq = data.quran.sura[x-1].aya[y-1].text;
@@ -250,7 +254,7 @@ $(document).ready(function () {
 	function get_aqTrans(){
 		x = gsur;
 		y = gnum;
-		$.getJSON("./json/" + transData + ".json", {
+		$.getJSON(uri + transData + ".json", {
 			format : "jsonp"
 		}, function (data) {
 			eventTrans = data.quran.sura[x-1].aya[y-1].text;

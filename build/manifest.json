@@ -1,0 +1,17 @@
+{
+  "short_name": "aq_pjk",
+  "name": "Al-Quran Projek",
+  "description": "Al-Quran (ID) indexing/searching",
+  "icons": [
+    {
+      "src": "logo.png",
+      "type": "image/png",
+      "sizes": "32x32"
+    }
+  ],
+  "start_url": "/?source=pwa",
+  "background_color": "#3367D6",
+  "display": "standalone",
+  "scope": "/",
+  "theme_color": "#3367D6"
+}
