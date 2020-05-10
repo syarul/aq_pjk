@@ -7,7 +7,7 @@ $(document).ready(function () {
 	var transData = 'id.indonesia'; // indonesia translation
 
 	var devUri = './json/'
-	var prodUri = 'https://raw.githubusercontent.com/syarul/aq_pjk/master/json/'
+	var prodUri = 'https://raw.githubusercontent.com/syarul/aq_pjk/master/build/json/'
 	var uri = prodUri
 	
 	//clear global variables and search entries once user focus on input
